@@ -73,7 +73,7 @@ def save_to_csv_s3(df, symbol, bucket_name):
 def lambda_handler(event, context):
     """Main Lambda function."""
     # List of stock symbols
-    symbols = event.get('symbols', ['AAPL'])
+    symbols = event.get('symbols', ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'JNJ', 'NFLX'])
 
     for symbol in symbols:
         print(f"Processing {symbol}...")
