@@ -1,0 +1,181 @@
+/* /* .stock-prediction-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  select {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+   */
+/* 
+.stock-prediction-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+select {
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px; /* Small gap between dropdown and the first button */
+/*}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-right: 20px;
+    border-radius: 4px;
+    margin-top: 10px; /* Small gap between the first button and the second one */
+
+/*
+}
+button:first-of-type {
+    margin-top: 20px; /* Additional gap between dropdown and the first button */
+
+/*
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+img {
+    margin-top: 20px;
+    max-width: 80%;
+    height: auto;
+} */
+
+/* Add to your StockPrediction.css */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  
+}
+
+.button-container button {
+  padding: 10px 20px; /* Add padding inside the buttons */
+  margin-right: 10px;  /* Add space between buttons */
+  font-size: 16px;
+}
+
+.button-container button:last-child {
+  margin-right: 0; /* Remove right margin from the last button */
+}
+
+.stock-prediction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#predictBtn, #stockValueBtn, #fetchNewsBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color:    #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+#resultContainer {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+#imageSection {
+  flex: 1;
+  max-width: 60%;
+  margin-right: 20px;
+}
+
+#stockValueTable {
+  flex: 1;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+#newsSection {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #0e0d0d;
+  border-radius: 5px;
+}
+#stockSelect {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #ccc;  /* A subtle border for better visibility */
+  border-radius: 4px;  /* Rounded corners for a cleaner look */
+  cursor: pointer;
+  font-size: 16px;
+  width: 200px;  /* Set a fixed width to control dropdown size */
+  transition: border-color 0.3s ease; /* Smooth transition for focus state */
+}
+
+#stockSelect:focus {
+  border-color: #007bff;  /* Blue border on focus for better accessibility */
+  outline: none;  /* Removes the default focus outline */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px; /* Smaller font for stock value table */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+h3, h4 {
+  font-size: 16px;
+}
+
+h4 a {
+  text-decoration: none;
+  color: #2C3E50;
+}
+
+h4 a:hover {
+  color: #3498DB;
+}
+
+p {
+  font-size: 14px;
+}
+
+
+
