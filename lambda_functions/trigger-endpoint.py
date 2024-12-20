@@ -13,7 +13,7 @@ runtime_client = boto3.client('sagemaker-runtime')
 s3_client = boto3.client('s3')
 
 # Constants
-endpoint_name = 'tensorflow-inference-2024-12-12-16-21-19-842'
+endpoint_name = 'tensorflow-inference-2024-12-19-17-46-15-093'
 BUCKET_NAME = 'stockbucket-ece528'
 
 # Logging setup
@@ -48,13 +48,13 @@ def lambda_handler(event, context):
         if len(close_prices_scaled) < 60:
             raise ValueError("Not enough data points for prediction (minimum 60 required).")
         
-        new_data = close_prices_scaled[-60:]
+        new_data = close_prices_scaled
         new_data_reshaped = [[price] for price in new_data]  # Reshape for LSTM input
 
         # Predict next n days
         def predict_next_n_days(n):
             predictions = []
-            current_input = new_data_reshaped[-60:]  # Last 60 days as input
+            current_input = new_data_reshaped  # Last 60 days as input
             
             for _ in range(n):
                 # Invoke the SageMaker endpoint for the next day
@@ -72,8 +72,6 @@ def lambda_handler(event, context):
         
                 # Reverse the scaling to get the original predicted price
                 predicted_price = predicted_scaled_price * (max_price - min_price) + min_price
-                predicted_prices = random.uniform(-5, 5) 
-                predicted_price += predicted_prices
                 
                 predictions.append(predicted_price)
                 
