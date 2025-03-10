@@ -49,27 +49,6 @@ const StockPrediction = () => {
     }
   };
 
-  // Fetch stock news based on selected ticker (via API Gateway and Lambda)
-  // const fetchStockNews = async () => {
-  //   const apiUrl = `https://h1wusbnqv2.execute-api.us-east-1.amazonaws.com/dev?stock=${stockSymbol}`;
-
-  //   try {
-  //     const response = await fetch(apiUrl);
-  //     if (!response.ok) throw new Error('Network response was not ok');
-
-  //     const data = await response.json();
-  //     // Parse the body to get the news articles
-  //     const newsArticles = JSON.parse(data.body); // Assuming the body is a stringified JSON array
-
-  //     // Set the parsed news articles
-  //     setNews(newsArticles);
-  //     setIsNewsFetched(true);  // Set news as fetched
-  //     setSelectedStockSymbol(stockSymbol); // Update the selected stock symbol when news is fetched
-  //   } catch (error) {
-  //     console.error('Error fetching news:', error);
-  //   }
-  // };
-
   const fetchStockNews = async () => {
     const apiUrl = `https://h1wusbnqv2.execute-api.us-east-1.amazonaws.com/dev?stock=${stockSymbol}`;
   
